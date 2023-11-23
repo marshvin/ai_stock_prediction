@@ -14,5 +14,7 @@ def load_stock_data():
     for company, com_name in zip(company_list, company_name):
         company["company_name"] = com_name
 
+    df.index = df.index.tz_localize('UTC')
+
     df = pd.concat(company_list, axis=0)
     return df
