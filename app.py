@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from data_loader import load_stock_data  # Import the data loading function
 
 # Load your stock data
+# Load your stock data
 data = load_stock_data()
 
 # Remove timezone information from the index
