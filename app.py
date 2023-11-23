@@ -1,12 +1,11 @@
+# app.py
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from datetime import datetime
+from data_loader import load_stock_data  # Import the data loading function
 
 # Load your stock data
-# Replace this with your actual data loading logic
-# For example, you can use pd.read_csv('your_data.csv')
-data = pd.DataFrame(...)  # Your stock data
+data = load_stock_data()
 
 # Function to plot the data
 def plot_stock_data(selected_year):
