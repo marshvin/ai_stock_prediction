@@ -37,8 +37,8 @@ def main():
 def plot_predictions(data):
     fig, ax = plt.subplots(figsize=(16, 6))
     
-    # Convert 'date' column to a NumPy array
-    dates = data['date'].astype(str).values
+    # Convert 'date' column to a list
+    dates = data['date'].astype(str).tolist()
     
     ax.plot(dates, data['Close'], label='Actual Close')
     ax.plot(dates, data['Predictions'], label='Predictions')
@@ -49,6 +49,7 @@ def plot_predictions(data):
     ax.legend(loc='lower right')
     
     return fig
+
 
 if __name__ == '__main__':
     main()
