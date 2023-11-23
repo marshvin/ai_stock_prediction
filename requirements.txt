@@ -1,5 +1,6 @@
 streamlit==0.88.0
 matplotlib==3.4.3
 yfinance==0.1.63
+pandas_datareader==0.10.0
 
 # Add other dependencies as needed
