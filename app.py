@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title('Stock Prediction App')
+    st.title('Stock Prediction Apple')
 
     # Button for displaying the saved image
     if st.button('Show Predictions'):
