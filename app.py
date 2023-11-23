@@ -36,12 +36,18 @@ def main():
 # Function to plot predictions
 def plot_predictions(data):
     fig, ax = plt.subplots(figsize=(16, 6))
-    ax.plot(data['date'], data['Close'], label='Actual Close')
-    ax.plot(data['date'], data['Predictions'], label='Predictions')
+    
+    # Convert 'date' column to a NumPy array
+    dates = data['date'].values
+    
+    ax.plot(dates, data['Close'], label='Actual Close')
+    ax.plot(dates, data['Predictions'], label='Predictions')
+    
     ax.set_title('Stock Predictions')
     ax.set_xlabel('Date', fontsize=18)
     ax.set_ylabel('Close Price USD ($)', fontsize=18)
     ax.legend(loc='lower right')
+    
     return fig
 
 if __name__ == '__main__':
