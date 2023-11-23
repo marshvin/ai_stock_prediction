@@ -38,7 +38,7 @@ def plot_predictions(data):
     fig, ax = plt.subplots(figsize=(16, 6))
     
     # Convert 'date' column to a NumPy array
-    dates = data['date'].values
+    dates = data['date'].astype(str).values
     
     ax.plot(dates, data['Close'], label='Actual Close')
     ax.plot(dates, data['Predictions'], label='Predictions')
